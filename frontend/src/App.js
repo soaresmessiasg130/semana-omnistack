@@ -1,27 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
 
-function App() {
+import Routes from './routes';
+
+import './global.css';
+
+export default function App () {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h3>Messias Soares</h3>
-        <p>
-          Hello OmniStack!
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Routes />
+    </div>
+  );
+}
+
+/*function App() {
+  const [ counter, setCounter ] = useState(0);
+  function increment () {
+    setCounter(counter + 1);
+  }
+  return (
+    <div>
+      <Header title="Be The Hero">Contador: { counter }</Header>
+      <button onClick={ increment }>Increment</button>
+      <Logon />
     </div>
   );
 }
 
 export default App;
+*/
